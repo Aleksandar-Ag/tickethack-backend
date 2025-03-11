@@ -33,3 +33,5 @@ fs.writeFile('./trips.json', JSON.stringify(sortedTrips), (err) => {
     console.log(`${NB_TRIPS} trips have been generated in trips.json file. Happy hackathon!`);
   }
 });
+
+module.exports = {randomElement};
