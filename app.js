@@ -1,3 +1,6 @@
+require('./models/connection');
+const Trajet = require('./models/trajets')
+
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
