@@ -7,10 +7,10 @@ const moment = require('moment');
 
 router.post('/', (req, res) => {
     // Renvoie une erreur s'il y a un champ manquant
-    /*if (!req.body.departure || !req.body.arrival || !req.body.date) {
+    if (!req.body.departure || !req.body.arrival || !req.body.date) {
         res.json({ error: "No trip found" });
         return;
-    }*/
+    }
 
     function dateFormatted(jour) {
         return moment(jour).format('DD/MM/YYYY')
@@ -22,10 +22,10 @@ router.post('/', (req, res) => {
     })
     
     // /POST /trips pour trouver tous les trajets avec le départ et l'arrivée
-    /*Trajet.find({ departure: req.body.departure, arrival: req.body.arrival })
+    Trajet.find({ departure: req.body.departure, arrival: req.body.arrival })
         .then(data => {
             res.json({ data })
-        })*/
+        })
 });
 
 module.exports = router
